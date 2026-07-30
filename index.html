@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>JustStreamIt</title>
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <header class="site-header">
+    <div class="site-header__inner">
+
+      <a class="logo" href="/" aria-label="Accueil JustStreamIt">
+        <svg class="logo__icon" viewBox="0 0 40 40" aria-hidden="true">
+          <path d="M8 6 A18 18 0 0 0 8 34" fill="none" stroke="currentColor" stroke-width="2"/>
+          <path d="M32 6 A18 18 0 0 1 32 34" fill="none" stroke="currentColor" stroke-width="2"/>
+          <circle cx="20" cy="20" r="9" fill="none" stroke="currentColor" stroke-width="2"/>
+          <circle cx="23" cy="17" r="3" fill="currentColor"/>
+        </svg>
+        <span class="logo__text">JustStreamIt</span>
+      </a>
+
+      <p class="site-header__tagline">Vidéos à la demande</p>
+
+    </div>
+  </header>
+
+  <main>
+
+    <section class="hero" aria-labelledby="hero-title">
+
+      <h2 class="section-title">Meilleur film</h2>
+
+      <article class="hero__card">
+
+        <img class="hero__image" src="" alt="" loading="lazy">
+
+        <div class="hero__content">
+
+          <h1 id="hero-title" class="hero__title">Chargement...</h1>
+
+          <p class="hero__summary">Chargement du résumé...</p>
+
+          <button class="btn btn--primary" type="button">Détails</button>
+
+        </div>
+
+      </article>
+
+    </section>
+
+    <section class="movie-row" aria-labelledby="top-rated-title">
+
+      <header class="movie-row__header">
+        <h2 id="top-rated-title" class="movie-row__title">Films les mieux notés</h2>
+      </header>
+
+      <ul class="movie-grid">
+        <!-- Films chargés par JavaScript -->
+      </ul>
+
+      <button class="btn btn--see-more" type="button">Voir plus</button>
+
+    </section>
+
+    <section class="movie-row" aria-labelledby="cat1-title">
+
+      <header class="movie-row__header">
+        <h2 id="cat1-title" class="movie-row__title">Mystery</h2>
+      </header>
+
+      <ul class="movie-grid">
+        <!-- Films chargés par JavaScript -->
+      </ul>
+
+      <button class="btn btn--see-more" type="button">Voir plus</button>
+
+    </section>
+
+    <section class="movie-row" aria-labelledby="cat2-title">
+
+      <header class="movie-row__header">
+        <h2 id="cat2-title" class="movie-row__title">Comédies</h2>
+      </header>
+
+      <ul class="movie-grid">
+        <!-- Films chargés par JavaScript -->
+      </ul>
+
+      <button class="btn btn--see-more" type="button">Voir plus</button>
+
+    </section>
+
+    <section class="movie-row" aria-labelledby="other-title">
+
+      <header class="movie-row__header movie-row__header--with-select">
+
+        <h2 id="other-title" class="movie-row__title">Autres :</h2>
+
+        <label class="visually-hidden" for="category-select">Choisir une catégorie</label>
+
+        <select id="category-select" class="category-select">
+          <option>Chargement...</option>
+        </select>
+
+      </header>
+
+      <ul id="other-category-grid" class="movie-grid">
+        <!-- Films chargés par JavaScript -->
+      </ul>
+
+      <button class="btn btn--see-more" type="button">Voir plus</button>
+
+    </section>
+
+  </main>
+
+  <section
+    id="movie-modal"
+    class="modal"
+    hidden
+    aria-modal="true"
+    role="dialog"
+    aria-labelledby="modal-title">
+
+    <div class="modal__backdrop" data-close-modal></div>
+
+    <article class="modal__panel">
+
+      <button class="modal__close" type="button" aria-label="Fermer" data-close-modal>×</button>
+
+      <div class="modal__body">
+
+        <img id="modal-poster" class="modal__poster" src="" alt="">
+
+        <div class="modal__info">
+
+          <h2 id="modal-title" class="modal__title">Film</h2>
+
+          <p class="modal__line">
+            <span id="modal-date"></span> -
+            <span id="modal-genre"></span>
+          </p>
+
+          <p class="modal__line">
+            <span id="modal-rating"></span> -
+            <span id="modal-duration"></span>
+            (<span id="modal-country"></span>)
+          </p>
+
+          <p class="modal__line">
+            IMDB score : <span id="modal-score"></span>
+          </p>
+
+          <p class="modal__line">
+            Recettes au box-office : <span id="modal-boxoffice"></span>
+          </p>
+
+          <p class="modal__label">Réalisé par :</p>
+          <p id="modal-director" class="modal__line"></p>
+
+          <p id="modal-summary" class="modal__summary"></p>
+
+          <p class="modal__label">Avec :</p>
+          <p id="modal-actors" class="modal__line"></p>
+
+          <button class="btn btn--primary modal__close-btn" type="button" data-close-modal>Fermer</button>
+
+        </div>
+
+      </div>
+
+    </article>
+
+  </section>
+
+  <footer class="site-footer">
+    <p>© 2026 JustStreamIt</p>
+  </footer>
+
+  <script src="js/script.js"></script>
+
+</body>
+
+</html>
