@@ -1,0 +1,68 @@
+/* ==========================================================================
+   LAYOUT — header et footer du site
+   ========================================================================== */
+
+.site-header {
+  background: var(--header-color);
+  border-bottom: 1px solid var(--border-color);
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+
+.site-header__inner {
+  display: flex;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  gap: .75rem 1.5rem;
+  max-width: var(--content-max-width);
+  margin: 0 auto;
+  padding: .75rem 1rem;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: .4rem;
+}
+
+.logo__icon {
+  width: 1.75rem;
+  height: 1.75rem;
+  color: white;
+}
+
+.logo__text {
+  font-family: var(--font-body);
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+.site-header__tagline {
+  margin: 0;
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: white;
+}
+
+.site-footer {
+  margin-top: 3rem;
+  padding: 2rem 1rem;
+  text-align: center;
+  color: var(--text-light);
+  border-top: 1px solid var(--border-color-light);
+  font-size: .9rem;
+}
+
+@media (min-width: 768px) {
+  .site-header__inner {
+    padding: 1rem 2rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .site-header__inner {
+    padding: 1rem 3rem;
+  }
+}
